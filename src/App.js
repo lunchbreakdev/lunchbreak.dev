@@ -29,7 +29,7 @@ function App() {
           />
         </div>
       </div>
-      <p className="font-bold text-xs mt-4 text-gray-600">View live above or the archives on social:</p>
+      <p className="font-bold text-xs mt-4 text-gray-600">View live above or the archives on one of the channels:</p>
       <div className="flex items-center justify-center gap-4 text-4xl mt-2">
         <SocialLink
           title="Twitch"
