@@ -3,7 +3,7 @@ import { RiTwitchFill, RiTwitterFill, RiYoutubeFill, RiGithubFill } from "react-
 
 function SocialLink({title, icon, href, className}) {
   return (
-    <a href={href} target="_blank" className={`${className ? className + ' ' : ''}transition-colors duration-300`}>
+    <a href={href} target="_blank" rel="noreferrer" className={`${className ? className + ' ' : ''}transition-colors duration-300`}>
       <span className="sr-only">{title}</span>
       {icon}
     </a>
