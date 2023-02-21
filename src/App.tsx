@@ -58,15 +58,15 @@ function App() {
 
   return (
     <div className="flex-1 py-8 flex flex-col items-center md:justify-center">
-      <h1>
+      <h1 className="group mb-6">
         <img
           src="/logo.svg"
           alt="Lunch Break Dev"
-          className="h-20 w-auto mb-4 transition-transform duration-150 hover:scale-105"
+          className="h-20 w-auto group-hover:animate-toast"
         />
       </h1>
       <div className="max-w-3xl mx-auto w-full">
-        <div className="aspect-video">
+        <div className="aspect-video md:rounded-3xl md:overflow-clip">
           <TwitchEmbed
             channel="lunchbreakdev"
             autoplay
@@ -79,7 +79,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="flex items-center justify-center gap-2 my-4">
+      <div className="flex items-center flex-wrap justify-center gap-2 my-4">
         {socials.map((social, i) => (
           <a
             key={i}
