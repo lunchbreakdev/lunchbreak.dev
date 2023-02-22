@@ -1,8 +1,10 @@
 import { useRef } from 'react'
 
 import {
+  IoLogoFacebook,
   IoLogoGithub,
   IoLogoInstagram,
+  IoLogoLinkedin,
   IoLogoTiktok,
   IoLogoTwitch,
   IoLogoTwitter,
@@ -45,6 +47,18 @@ function App() {
       hover: 'hover:text-[#405de6] focus-visible:ring-[#405de6]',
     },
     {
+      title: 'Facebook',
+      icon: IoLogoFacebook,
+      to: 'https://www.facebook.com/lunchbreakdev',
+      hover: 'hover:text-[#1877f2] focus-visible:ring-[#1877f2]',
+    },
+    {
+      title: 'LinkedIn',
+      icon: IoLogoLinkedin,
+      to: 'https://www.linkedin.com/company/lunchbreakdev',
+      hover: 'hover:text-[#0077b5] focus-visible:ring-[#0077b5]',
+    },
+    {
       title: 'TikTok',
       icon: IoLogoTiktok,
       to: 'https://tiktok.com/@lunchbreakdev',
@@ -79,7 +93,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="flex items-center flex-wrap justify-center gap-2 my-4">
+      <div className="flex items-center flex-wrap justify-center gap-1 my-4">
         {socials.map((social, i) => (
           <a
             key={i}
@@ -91,7 +105,7 @@ function App() {
             }transition-colors duration-300 p-2 rounded-full focus-visible:ring-[3px] focus-visible:outline-none`}
           >
             <span className="sr-only">{social.title}</span>
-            <social.icon className="h-8 w-8" aria-hidden="true" />
+            <social.icon className="h-7 w-7" aria-hidden="true" />
           </a>
         ))}
       </div>
