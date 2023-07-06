@@ -12,6 +12,8 @@ import {
 } from 'react-icons/io5'
 import { TwitchEmbed, TwitchEmbedInstance } from 'react-twitch-embed'
 
+import ThreadsIcon from './components/ThreadsIcon'
+
 function App() {
   const embed = useRef<TwitchEmbedInstance>()
 
@@ -63,6 +65,12 @@ function App() {
       icon: IoLogoTiktok,
       to: 'https://tiktok.com/@lunchbreakdev',
       hover: 'hover:text-[#ff2c55] focus-visible:ring-[#ff2c55]',
+    },
+    {
+      title: 'Threads',
+      icon: ThreadsIcon,
+      to: 'https://www.threads.net/@lunchbreakdev',
+      hover: 'hover:text-[#e1306c] focus-visible:ring-[#e1306c]',
     },
   ]
 
