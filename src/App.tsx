@@ -101,7 +101,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="flex items-center flex-wrap justify-center gap-1 my-4">
+      <div className="max-w-xs sm:max-w-full flex items-center flex-wrap justify-center gap-1 my-4">
         {socials.map((social, i) => (
           <a
             key={i}
