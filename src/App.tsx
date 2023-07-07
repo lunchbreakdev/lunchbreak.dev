@@ -82,7 +82,7 @@ function App() {
     <div className="flex-1 py-8 flex flex-col items-center md:justify-center">
       <h1 className="group mb-6">
         <img
-          src="/logo.svg"
+          src="./logo.svg"
           alt="Lunch Break Dev"
           className="h-20 w-auto group-hover:animate-toast"
         />
