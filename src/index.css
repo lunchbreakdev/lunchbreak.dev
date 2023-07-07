@@ -1,7 +1,7 @@
 @tailwind base;
 
 html, body {
-  @apply h-full bg-[#f8ce8c];
+  @apply h-full bg-[#f8ce8c] text-stone-800;
 }
 
 #root {
@@ -10,3 +10,7 @@ html, body {
 
 @tailwind components;
 @tailwind utilities;
+
+[class*="transition-"] {
+  @apply duration-300;
+}

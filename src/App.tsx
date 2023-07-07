@@ -12,6 +12,7 @@ import {
 } from 'react-icons/io5'
 import { TwitchEmbed, TwitchEmbedInstance } from 'react-twitch-embed'
 
+import Logo from './components/Logo'
 import ThreadsIcon from './components/ThreadsIcon'
 
 function App() {
@@ -81,11 +82,8 @@ function App() {
   return (
     <div className="flex-1 py-8 flex flex-col items-center md:justify-center">
       <h1 className="group mb-6">
-        <img
-          src="./logo.svg"
-          alt="Lunch Break Dev"
-          className="h-20 w-auto group-hover:animate-toast"
-        />
+        <span className="sr-only">Lunch Break Dev</span>
+        <Logo className="h-20 w-auto group-hover:animate-toast" aria-hidden />
       </h1>
       <div className="max-w-3xl mx-auto w-full">
         <div className="aspect-video md:rounded-3xl md:overflow-hidden">
@@ -101,7 +99,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="max-w-xs sm:max-w-full flex items-center flex-wrap justify-center gap-1 my-4">
+      <div className="max-w-[16rem] sm:max-w-full flex items-center flex-wrap justify-center gap-1 my-4">
         {socials.map((social, i) => (
           <a
             key={i}
@@ -110,7 +108,7 @@ function App() {
             rel="noreferrer"
             className={`${
               social.hover ? social.hover + ' ' : ''
-            }transition-colors duration-300 p-2 rounded-full focus-visible:ring-[3px] focus-visible:outline-none`}
+            }transition-colors p-2 rounded-full focus-visible:ring-[3px] focus-visible:outline-none`}
           >
             <span className="sr-only">{social.title}</span>
             <social.icon className="h-7 w-7" aria-hidden="true" />
