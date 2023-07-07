@@ -40,8 +40,6 @@
          run: yarn install
        - name: Build
          run: yarn build
-       - name: Static HTML export with Next.js
-         run: yarn next export
        - name: Upload artifact
          uses: actions/upload-pages-artifact@v1
          with:
