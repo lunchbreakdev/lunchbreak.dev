@@ -19,6 +19,8 @@ import ThreadsIcon from './components/ThreadsIcon'
 function App() {
   const embed = useRef<TwitchEmbedInstance>()
 
+  const firstSocial = useRef<HTMLAnchorElement>(null)
+
   const socials = [
     {
       title: 'Twitch',
@@ -36,7 +38,7 @@ function App() {
       title: 'GitHub',
       icon: IoLogoGithub,
       to: 'https://github.com/lunchbreakdev',
-      hover: 'hover:text-[#6e5494] focus-visible:ring-[#6e5494]',
+      hover: 'hover:text-[#6e40c9] focus-visible:ring-[#6e40c9]',
     },
     {
       title: 'Twitter',
@@ -88,6 +90,20 @@ function App() {
 
   return (
     <div className="flex-1 py-8 flex flex-col items-center md:justify-center">
+      <div className="fixed top-2 left-2">
+        <a
+          href="#social-nav"
+          onClick={(e) => {
+            e.preventDefault()
+            firstSocial.current && firstSocial.current.focus()
+          }}
+          className="sr-only focus-visible:not-sr-only group font-medium outline-none"
+        >
+          <span className="block px-3 py-1 rounded-full group-focus-visible:ring-[#803F99] group-focus-visible:ring-[3px] group-focus-visible:outline-none">
+            Skip to social nav
+          </span>
+        </a>
+      </div>
       <h1 className="group mb-6">
         <span className="sr-only">Lunch Break Dev</span>
         <Logo className="h-20 w-auto group-hover:animate-toast" aria-hidden />
@@ -106,10 +122,15 @@ function App() {
           />
         </div>
       </div>
-      <div className="max-w-[16rem] sm:max-w-full flex items-center flex-wrap justify-center gap-1 my-4">
+      <nav
+        id="social-nav"
+        aria-label="Social media navigation"
+        className="max-w-[16rem] sm:max-w-full flex items-center flex-wrap justify-center gap-1 my-4"
+      >
         {socials.map((social, i) => (
           <a
-            key={i}
+            key={`social-link-${social.title.toLocaleLowerCase()}`}
+            ref={i === 0 ? firstSocial : undefined}
             href={social.to}
             target="_blank"
             rel="noreferrer"
@@ -121,7 +142,7 @@ function App() {
             <social.icon className="h-7 w-7" aria-hidden="true" />
           </a>
         ))}
-      </div>
+      </nav>
     </div>
   )
 }
