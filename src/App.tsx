@@ -5,6 +5,7 @@ import {
   IoLogoGithub,
   IoLogoInstagram,
   IoLogoLinkedin,
+  IoLogoReddit,
   IoLogoTiktok,
   IoLogoTwitch,
   IoLogoTwitter,
@@ -72,6 +73,12 @@ function App() {
       icon: ThreadsIcon,
       to: 'https://www.threads.net/@lunchbreakdev',
       hover: 'hover:text-[#e1306c] focus-visible:ring-[#e1306c]',
+    },
+    {
+      title: 'Reddit',
+      icon: IoLogoReddit,
+      to: 'https://www.reddit.com/user/lunchbreakdev',
+      hover: 'hover:text-[#ff4500] focus-visible:ring-[#ff4500]',
     },
   ]
 
