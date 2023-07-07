@@ -88,7 +88,7 @@ function App() {
         />
       </h1>
       <div className="max-w-3xl mx-auto w-full">
-        <div className="aspect-video md:rounded-3xl md:overflow-clip">
+        <div className="aspect-video md:rounded-3xl md:overflow-hidden">
           <TwitchEmbed
             channel="lunchbreakdev"
             autoplay
